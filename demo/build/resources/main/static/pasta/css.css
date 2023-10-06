@@ -1,0 +1,59 @@
+
+
+
+  table {
+    font-family: Consolas,Menlo,"courier new",monospace;
+
+
+  }
+
+
+
+  .ListaDeLivros {
+    margin: auto;
+    width: 75%;
+    height: 25em;
+    border: 3px solid green;
+    padding: 10px;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Define uma cor para as linhas pares */
+  }
+
+  tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Define uma cor para as linhas ímpares */
+  }
+.CadastrarLivro {
+margin-top: 20px;
+   width: 35%;
+    height: 20em;
+    border: 3px solid green;
+    padding: 10px;
+}
+.botao {
+    padding: 10px 20px; /* Espaçamento interno (padding) para o botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse sobre o botão */
+    float: right;
+}
+.BuscarLivro{
+margin-top: 20px;
+    width: 60%;
+    height: 4em;
+    border: 3px solid green;
+    padding: 10px;
+    margin-left: 2%;
+}
+#tituloB{
+    width: 80%;
+}
+.FormConsulta{
+display: flex;
+}
+

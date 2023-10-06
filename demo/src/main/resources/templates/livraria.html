@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Thymeleaf</title>
+    <link rel="stylesheet" href="./pasta/css.css">
+</head>
+<body>
+<p th:text="${mensagem}"></p>
+
+       <div id="ListaDeLivros" class="ListaDeLivros">
+           <table cellpadding="10">
+               <tr>
+                   <th>Título</th>
+                   <th>Descrição</th>
+                   <th>Autor</th>
+                   <th>Paginas</th>
+                   <th>Idioma</th>
+                   <th>ISBN</th>
+               </tr>
+               <tr th:each="livro : ${listaLivro}">
+                   <td th:text="${livro.getTitulo()}"></td>
+                   <td th:text="${livro.getDescricao()}"></td>
+                   <td th:text="${livro.getAutor()}"></td>
+                   <td th:text="${livro.getPaginas()}"></td>
+                   <td th:text="${livro.getIdioma()}"></td>
+                   <td th:text="${livro.getISBN()}"></td>
+               </tr>
+           </table>
+       </div>
+
+<div class="ListaDeLivros">
+        <div id="CadastrarLivro" class="CadastrarLivro">
+            <table>
+                <form action="/cadastroLivro" method="post">
+                    <label for="titulo">Titulo do livro:</label>
+                    <input type="text" id="titulo" name="titulo"><br><br>
+                    <label for="descricao">Descrição do livro:</label>
+                    <input type="text" id="descricao" name="descricao"><br><br>
+                    <label for="autor">Autor do livro:</label>
+                    <input type="text" id="autor" name="autor"><br><br>
+                    <label for="paginas">Quantidade de paginas do livro:</label>
+                    <input type="text" id="paginas" name="paginas"><br><br>
+                    <label for="idioma">Idioma do livro:</label>
+                    <input type="text" id="idioma" name="idioma"><br><br>
+                    <label for="ISBN">ISBN do livro:</label>
+                    <input type="text" id="ISBN" name="ISBN"><br><br>
+                    <button class="botao">Enviar</button>
+                    <button class="botao">Limpar</button>
+                </form>
+            </table>
+
+        </div>
+
+        <div id="BuscarLivro" class="BuscarLivro">
+            <form action="/biblioteca" method="get" class="FormConsulta">
+                <label for="tituloB">Titulo do livro:</label>
+                <input type="text" id="tituloB" name="tituloB"><br><br>
+                <button class="botao">Buscar</button>
+            </form>
+
+        </div>
+</div>
+
+
+
+</body>
+</html>
